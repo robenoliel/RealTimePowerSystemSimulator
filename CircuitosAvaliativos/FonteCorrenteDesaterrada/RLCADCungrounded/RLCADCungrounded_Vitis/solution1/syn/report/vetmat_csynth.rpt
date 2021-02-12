@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vitis HLS Report for 'vetmat'
+================================================================
+* Date:           Sat Feb  6 16:57:22 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        RLCADCungrounded_Vitis
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.440 ns|     0.20 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       14|       14|  0.140 us|  0.140 us|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       2|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|     367|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     367|      29|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2060|  2800|  607200|  303600|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------+----------+----+---+----+------------+------------+
+    | Variable Name | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------+----------+----+---+----+------------+------------+
+    |ap_enable_pp0  |       xor|   0|  0|   2|           1|           2|
+    +---------------+----------+----+---+----+------------+------------+
+    |Total          |          |   0|  0|   2|           1|           2|
+    +---------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |G_vec_I_0_o  |   9|          2|   32|         64|
+    |G_vec_I_1_o  |   9|          2|   32|         64|
+    |G_vec_I_2_o  |   9|          2|   32|         64|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  27|          6|   96|        192|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |acc_1_0_1_reg_197         |  32|   0|   32|          0|
+    |acc_1_1_1_reg_207         |  32|   0|   32|          0|
+    |acc_1_1_reg_180           |  32|   0|   32|          0|
+    |acc_1_reg_170             |  32|   0|   32|          0|
+    |ap_CS_fsm                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9   |   1|   0|    1|          0|
+    |mul_0_1_reg_175           |  32|   0|   32|          0|
+    |mul_0_2_reg_202           |  32|   0|   32|          0|
+    |mul_1_1_reg_185           |  32|   0|   32|          0|
+    |mul_1_2_reg_213           |  32|   0|   32|          0|
+    |mul_1_reg_159             |  32|   0|   32|          0|
+    |mul_2_2_reg_218           |  32|   0|   32|          0|
+    |mul_reg_154               |  32|   0|   32|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 367|   0|  367|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|        vetmat|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|        vetmat|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|        vetmat|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_171_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_171_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_171_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_171_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_171_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_176_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_176_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_176_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_176_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_176_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_181_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_181_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_181_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_181_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_181_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_726_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_726_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_726_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_726_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_726_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_730_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_730_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_730_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_730_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_730_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_734_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_734_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_734_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_734_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_734_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_738_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_738_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_738_p_opcode  |  out|    2|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_738_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_738_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_186_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_186_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_186_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_186_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_191_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_191_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_191_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_191_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_196_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_196_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_196_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_196_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_742_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_742_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_742_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_742_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_746_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_746_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_746_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_746_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_750_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_750_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_750_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_750_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_754_p_din0    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_754_p_din1    |  out|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_754_p_dout0   |   in|   32|  ap_ctrl_hs|        vetmat|  return value|
+|grp_fu_754_p_ce      |  out|    1|  ap_ctrl_hs|        vetmat|  return value|
+|G_vec_I_0_i          |   in|   32|     ap_ovld|     G_vec_I_0|       pointer|
+|G_vec_I_0_o          |  out|   32|     ap_ovld|     G_vec_I_0|       pointer|
+|G_vec_I_0_o_ap_vld   |  out|    1|     ap_ovld|     G_vec_I_0|       pointer|
+|G_vec_I_1_i          |   in|   32|     ap_ovld|     G_vec_I_1|       pointer|
+|G_vec_I_1_o          |  out|   32|     ap_ovld|     G_vec_I_1|       pointer|
+|G_vec_I_1_o_ap_vld   |  out|    1|     ap_ovld|     G_vec_I_1|       pointer|
+|G_vec_I_2_i          |   in|   32|     ap_ovld|     G_vec_I_2|       pointer|
+|G_vec_I_2_o          |  out|   32|     ap_ovld|     G_vec_I_2|       pointer|
+|G_vec_I_2_o_ap_vld   |  out|    1|     ap_ovld|     G_vec_I_2|       pointer|
+|G_vec_V_0            |  out|   32|      ap_vld|     G_vec_V_0|       pointer|
+|G_vec_V_0_ap_vld     |  out|    1|      ap_vld|     G_vec_V_0|       pointer|
+|G_vec_V_1            |  out|   32|      ap_vld|     G_vec_V_1|       pointer|
+|G_vec_V_1_ap_vld     |  out|    1|      ap_vld|     G_vec_V_1|       pointer|
+|G_vec_V_2            |  out|   32|      ap_vld|     G_vec_V_2|       pointer|
+|G_vec_V_2_ap_vld     |  out|    1|      ap_vld|     G_vec_V_2|       pointer|
++---------------------+-----+-----+------------+--------------+--------------+
+

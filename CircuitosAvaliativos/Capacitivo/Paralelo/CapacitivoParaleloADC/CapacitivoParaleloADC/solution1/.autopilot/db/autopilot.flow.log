@@ -1,0 +1,512 @@
+INFO-FLOW: Workspace C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/Capacitivo/Paralelo/CapacitivoParaleloADC/CapacitivoParaleloADC/solution1 opened at Tue Feb 09 15:15:00 -0300 2021
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     ap_set_clock -name default -uncertainty 0.2 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.2ns.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/Virtex-7/Virtex-7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     ap_family_info -name Virtex-7 -data parts 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2020.2\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data/parts/arch.xml
+Command     ap_family_info done; 0.526 sec.
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.171 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.248 sec.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/Virtex-7/Virtex-7_fpv7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.153 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.227 sec.
+Execute     set_part xc7vx485tffg1157-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute       ap_part_info -name xc7vx485tffg1157-1 -data single -quiet 
+Execute       ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         ap_part_info -data single -name xc7vx485t-ffg1157-1 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
+Execute         config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute         config_chip_info -speed slow 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute         config_library_info -library virtex7_slow 
+Execute         config_library_info -family virtex7 
+Execute         config_library_info -part xc7vx485t:-ffg1157:-1 
+Execute         import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/virtex7/virtex7 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+Command         import_lib done; 0.11 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.151 sec.
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.224 sec.
+Command       add_library done; 0.359 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.375 sec.
+Execute     ap_part_info -data single -name xc7vx485tffg1157-1 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data resources 
+Execute     config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -m_axi_offset 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 1.472 sec.
+Execute   set_part xc7vx485tffg1157-1 
+INFO: [HLS 200-1510] Running: set_part xc7vx485tffg1157-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data single -quiet 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       ap_part_info -data single -name xc7vx485t-ffg1157-1 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
+Execute       config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_library_info -library virtex7_slow 
+Execute       config_library_info -family virtex7 
+Execute       config_library_info -part xc7vx485t:-ffg1157:-1 
+Execute       import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/virtex7/virtex7 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.153 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.219 sec.
+Command     add_library done; 0.253 sec.
+Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.266 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   set_clock_uncertainty 2% 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2% 
+Execute   csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.457 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 10.804 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 10.82 seconds; current allocated memory: 84.422 MB.
+Command ap_source done; 12.637 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/Capacitivo/Paralelo/CapacitivoParaleloADC/CapacitivoParaleloADC/solution1 opened at Tue Feb 09 15:16:02 -0300 2021
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     ap_set_clock -name default -uncertainty 0.2 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.2ns.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/Virtex-7/Virtex-7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     ap_family_info -name Virtex-7 -data parts 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2020.2\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data/parts/arch.xml
+Command     ap_family_info done; 0.536 sec.
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.174 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.255 sec.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/Virtex-7/Virtex-7_fpv7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.151 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.228 sec.
+Execute     set_part xc7vx485tffg1157-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute       ap_part_info -name xc7vx485tffg1157-1 -data single -quiet 
+Execute       ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         ap_part_info -data single -name xc7vx485t-ffg1157-1 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
+Execute         config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute         config_chip_info -speed slow 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute         config_library_info -library virtex7_slow 
+Execute         config_library_info -family virtex7 
+Execute         config_library_info -part xc7vx485t:-ffg1157:-1 
+Execute         import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/virtex7/virtex7 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+Command         import_lib done; 0.106 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.154 sec.
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.226 sec.
+Command       add_library done; 0.357 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.375 sec.
+Execute     ap_part_info -data single -name xc7vx485tffg1157-1 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data resources 
+Execute     config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -m_axi_offset 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 1.483 sec.
+Execute   set_part xc7vx485tffg1157-1 
+INFO: [HLS 200-1510] Running: set_part xc7vx485tffg1157-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data single -quiet 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       ap_part_info -data single -name xc7vx485t-ffg1157-1 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
+Execute       config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_library_info -library virtex7_slow 
+Execute       config_library_info -family virtex7 
+Execute       config_library_info -part xc7vx485t:-ffg1157:-1 
+Execute       import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/virtex7/virtex7 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.153 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.222 sec.
+Command     add_library done; 0.258 sec.
+Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.272 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   set_clock_uncertainty 2% 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2% 
+Execute   csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.469 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 2.462 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.478 seconds; current allocated memory: 84.415 MB.
+Command ap_source done; 4.316 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/Capacitivo/Paralelo/CapacitivoParaleloADC/CapacitivoParaleloADC/solution1 opened at Tue Feb 09 15:16:45 -0300 2021
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     ap_set_clock -name default -uncertainty 0.2 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.2ns.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/Virtex-7/Virtex-7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     ap_family_info -name Virtex-7 -data parts 
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2020.2\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2020.2/data/parts/arch.xml
+Command     ap_family_info done; 0.548 sec.
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.175 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.254 sec.
+Execute     import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/Virtex-7/Virtex-7_fpv7 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute     source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.16 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.23 sec.
+Execute     set_part xc7vx485tffg1157-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute       ap_part_info -name xc7vx485tffg1157-1 -data single -quiet 
+Execute       ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute       add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         ap_part_info -data single -name xc7vx485t-ffg1157-1 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
+Execute         config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute         config_chip_info -speed slow 
+Execute         ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute         config_library_info -library virtex7_slow 
+Execute         config_library_info -family virtex7 
+Execute         config_library_info -part xc7vx485t:-ffg1157:-1 
+Execute         import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/virtex7/virtex7 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+Command         import_lib done; 0.121 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.154 sec.
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.225 sec.
+Command       add_library done; 0.372 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.389 sec.
+Execute     ap_part_info -data single -name xc7vx485tffg1157-1 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data resources 
+Execute     config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -m_axi_offset 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 1.51 sec.
+Execute   set_part xc7vx485tffg1157-1 
+INFO: [HLS 200-1510] Running: set_part xc7vx485tffg1157-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=C:/Xilinx/Vivado/2020.2
+INFO-FLOW: DBG:set_part: RDI_DATADIR=C:/Xilinx/Vivado/2020.2/data;C:/Xilinx/Vitis_HLS/2020.2/data
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data single -quiet 
+Execute     ap_part_info -name xc7vx485tffg1157-1 -data info 
+Execute     add_library xilinx/virtex7/virtex7:xc7vx485t:-ffg1157:-1 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       ap_part_info -data single -name xc7vx485t-ffg1157-1 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data resources 
+Execute       config_chip_info -resource {SLICE 75900} {LUT 303600} {FF 607200} {DSP 2800} {BRAM 2060} {URAM 0} 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute       ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute       config_library_info -library virtex7_slow 
+Execute       config_library_info -family virtex7 
+Execute       config_library_info -part xc7vx485t:-ffg1157:-1 
+Execute       import_lib C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/virtex7/virtex7 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/virtex7_dsp48e1.hlp 
+Execute       source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.152 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2020.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.219 sec.
+Command     add_library done; 0.255 sec.
+Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.27 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   set_clock_uncertainty 2% 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2% 
+Execute   csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     ap_part_info -name xc7vx485t-ffg1157-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.488 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 2.444 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.459 seconds; current allocated memory: 84.415 MB.
+Command ap_source done; 4.323 sec.
+Execute cleanup_all 

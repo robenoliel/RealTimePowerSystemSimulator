@@ -1,25 +1,25 @@
 #include "stdio.h"
 
-#define N_LC 2				// defines the number of LC elements
-#define I_SOURCES 1			// defines the number of current sources in the circuit
-#define V_SOURCES 3             // defines the number of voltage sources in the circuit
-#define NODES 5				// defines the maximum number of nodes in the circuit (except node 0)
-#define N 8					// defines the matrix G order (N = NODES + V_SOURCES)
+#define N_LC 0				// defines the number of LC elements
+#define I_SOURCES 0			// defines the number of current sources in the circuit
+#define V_SOURCES 1             // defines the number of voltage sources in the circuit
+#define NODES 1				// defines the maximum number of nodes in the circuit (except node 0)
+#define N 2					// defines the matrix G order (N = NODES + V_SOURCES)
 
 
 #define PI 3.141593
 
 //it refers to the output address for the require information
 #define A 0
-#define B 1
-#define C 2
-#define D 3
+#define B 0
+#define C 0
+#define D 0
 
 
-typedef double MATRIX_G;
+typedef float MATRIX_G;
 
-typedef double VECTOR_I;
-typedef double VECTOR_V;
+typedef float VECTOR_I;
+typedef float VECTOR_V;
 
 struct OUTPUT{
 	int a;
@@ -29,19 +29,19 @@ struct OUTPUT{
 };
 
 struct V_SOURCE{
-	double dtheta;
-	double amplitude;
-	double phase;
-	double DClevel;
+	float dtheta;
+	float amplitude;
+	float phase;
+	float DClevel;
 };
 
 struct I_SOURCE{
 	unsigned char n_out;
 	unsigned char n_in;
-	double dtheta;
-	double amplitude;
-	double phase;
-	double DClevel;
+	float dtheta;
+	float amplitude;
+	float phase;
+	float DClevel;
 
 };
 
@@ -49,6 +49,6 @@ struct LC_ELEMENT{
 	unsigned char type;
 	unsigned char n_out;
 	unsigned char n_in;
-	double g;
-	double Ih;
+	float g;
+	float Ih;
 };

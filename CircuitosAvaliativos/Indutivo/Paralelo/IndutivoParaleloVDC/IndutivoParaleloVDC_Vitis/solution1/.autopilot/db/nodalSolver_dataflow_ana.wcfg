@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="nodalSolver.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_nodalSolver_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver//AESL_inst_nodalSolver_activity">
+         <obj_property name="label">AESL_inst_nodalSolver_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_nodalSolver_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_nodalSolver_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver//AESL_inst_nodalSolver_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver//AESL_inst_nodalSolver_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver//AESL_inst_nodalSolver_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sinGen_fu_88_activity">
+            <obj_property name="label">grp_sinGen_fu_88_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_sinGen_fu_88_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_sinGen_fu_88_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sinGen_fu_88_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sinGen_fu_88_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sinGen_fu_88_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/grp_sin_or_cos_double_s_fu_46_activity">
+               <obj_property name="label">grp_sin_or_cos_double_s_fu_46_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_sin_or_cos_double_s_fu_46_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_sin_or_cos_double_s_fu_46_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/grp_sin_or_cos_double_s_fu_46_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/grp_sin_or_cos_double_s_fu_46_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/grp_sin_or_cos_double_s_fu_46_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/grp_vetmat_fu_108_activity">
+            <obj_property name="label">grp_vetmat_fu_108_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_vetmat_fu_108_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_vetmat_fu_108_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/grp_vetmat_fu_108_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/grp_vetmat_fu_108_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/grp_vetmat_fu_108_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/grp_histvect_fu_124_activity">
+            <obj_property name="label">grp_histvect_fu_124_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_histvect_fu_124_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_histvect_fu_124_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/grp_histvect_fu_124_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/grp_histvect_fu_124_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/grp_histvect_fu_124_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/grp_generic_rint_double_s_fu_138_activity">
+            <obj_property name="label">grp_generic_rint_double_s_fu_138_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_generic_rint_double_s_fu_138_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_generic_rint_double_s_fu_138_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/grp_generic_rint_double_s_fu_138_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/grp_generic_rint_double_s_fu_138_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/grp_generic_rint_double_s_fu_138_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/grp_generic_rint_double_s_fu_147_activity">
+            <obj_property name="label">grp_generic_rint_double_s_fu_147_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_generic_rint_double_s_fu_147_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_generic_rint_double_s_fu_147_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/grp_generic_rint_double_s_fu_147_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/grp_generic_rint_double_s_fu_147_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/grp_generic_rint_double_s_fu_147_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/grp_generic_rint_double_s_fu_156_activity">
+            <obj_property name="label">grp_generic_rint_double_s_fu_156_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_generic_rint_double_s_fu_156_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_generic_rint_double_s_fu_156_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/grp_generic_rint_double_s_fu_156_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/grp_generic_rint_double_s_fu_156_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/grp_generic_rint_double_s_fu_156_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver//AESL_inst_nodalSolver_activity">
+      <obj_property name="ElementShortName">AESL_inst_nodalSolver_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_nodalSolver_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_nodalSolver_group">
+      <obj_property name="label">AESL_inst_nodalSolver</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sinGen_fu_88_activity">
+         <obj_property name="ElementShortName">grp_sinGen_fu_88_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_sinGen_fu_88_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/grp_vetmat_fu_108_activity">
+         <obj_property name="ElementShortName">grp_vetmat_fu_108_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_vetmat_fu_108_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/grp_histvect_fu_124_activity">
+         <obj_property name="ElementShortName">grp_histvect_fu_124_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_histvect_fu_124_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/grp_generic_rint_double_s_fu_138_activity">
+         <obj_property name="ElementShortName">grp_generic_rint_double_s_fu_138_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_generic_rint_double_s_fu_138_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/grp_generic_rint_double_s_fu_147_activity">
+         <obj_property name="ElementShortName">grp_generic_rint_double_s_fu_147_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_generic_rint_double_s_fu_147_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/grp_generic_rint_double_s_fu_156_activity">
+         <obj_property name="ElementShortName">grp_generic_rint_double_s_fu_156_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_generic_rint_double_s_fu_156_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_nodalSolver_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_sinGen_fu_88_group">
+         <obj_property name="label">grp_sinGen_fu_88</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/grp_sin_or_cos_double_s_fu_46_activity">
+            <obj_property name="ElementShortName">grp_sin_or_cos_double_s_fu_46_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_sin_or_cos_double_s_fu_46_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_sinGen_fu_88_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_sin_or_cos_double_s_fu_46_group">
+            <obj_property name="label">grp_sin_or_cos_double_s_fu_46</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_sin_or_cos_double_s_fu_46_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_sinGen_fu_88/grp_sin_or_cos_double_s_fu_46/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_vetmat_fu_108_group">
+         <obj_property name="label">grp_vetmat_fu_108</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_vetmat_fu_108_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_vetmat_fu_108/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_histvect_fu_124_group">
+         <obj_property name="label">grp_histvect_fu_124</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_histvect_fu_124_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_histvect_fu_124/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_generic_rint_double_s_fu_138_group">
+         <obj_property name="label">grp_generic_rint_double_s_fu_138</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_generic_rint_double_s_fu_138_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_138/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_generic_rint_double_s_fu_147_group">
+         <obj_property name="label">grp_generic_rint_double_s_fu_147</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_generic_rint_double_s_fu_147_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_147/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_generic_rint_double_s_fu_156_group">
+         <obj_property name="label">grp_generic_rint_double_s_fu_156</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_generic_rint_double_s_fu_156_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_nodalSolver_top/AESL_inst_nodalSolver/grp_generic_rint_double_s_fu_156/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

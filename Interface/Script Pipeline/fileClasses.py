@@ -89,9 +89,9 @@ class File_main_core_cpp:
             elif kind == 'A':
                 self.sourceV.append([2*np.pi*line[4]*h, line[3], line[5]*(np.pi/180), line[6]])
             elif kind == 'B':
-                self.sourceI.append([line[0], line[1], 2*np.pi*line[4]*h, line[3], line[5]*(np.pi/180), line[6]])
+                self.sourceI.append([line[1], line[0], 2*np.pi*line[4]*h, line[3], line[5]*(np.pi/180), line[6]])
             elif kind == 'L' or kind == 'C':
-                self.LC.append([{'L':0, 'C':1}[kind], line[0], line[1], {'L':h/line[3], 'C':4*line[3]/h}[kind],0.0])
+                self.LC.append([{'L':0, 'C':1}[kind], line[1], line[0], {'L':h/line[3], 'C':4*line[3]/h}[kind],0.0])
             
         position = self.main_string.find('static I_SOURCE i_sources[I_SOURCES] = ')
         position += len('static I_SOURCE i_sources[I_SOURCES] = ')

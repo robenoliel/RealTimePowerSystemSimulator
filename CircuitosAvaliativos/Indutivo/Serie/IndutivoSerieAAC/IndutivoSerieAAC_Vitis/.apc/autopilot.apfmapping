@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="main_core.cpp" path="C:\Users\rodrigobagdadi\Desktop\RealTime\ProjetoPipelineHLS\CircuitosAvaliativos\Indutivo\Serie\IndutivoSerieAAC\HLSfiles\main_core.cpp"/>
+    <originFiles name="main_core.h" path="C:\Users\rodrigobagdadi\Desktop\RealTime\ProjetoPipelineHLS\CircuitosAvaliativos\Indutivo\Serie\IndutivoSerieAAC\HLSfiles\main_core.h"/>
+  </source>
+  <testbench>
+    <originFiles name="main_core_tb.cpp" path="C:\Users\rodrigobagdadi\Desktop\RealTime\ProjetoPipelineHLS\CircuitosAvaliativos\Indutivo\Serie\IndutivoSerieAAC\HLSfiles\main_core_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

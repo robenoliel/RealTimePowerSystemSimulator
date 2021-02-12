@@ -1,0 +1,234 @@
+
+
+================================================================
+== Vitis HLS Report for 'generic_rint_double_s'
+================================================================
+* Date:           Sat Feb  6 16:57:11 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        RLCADCungrounded_Vitis
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.558 ns|     0.20 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        1|       67|  10.000 ns|  0.670 us|    1|   67|     none|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       62|       62|         1|          1|          1|    62|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 7 2 6 
+2 --> 3 
+3 --> 4 3 
+4 --> 5 
+5 --> 6 
+6 --> 
+7 --> 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.02>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %x"   --->   Operation 8 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%index_table = alloca i64 1" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:49]   --->   Operation 9 'alloca' 'index_table' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 64> <RAM>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%data_V = bitcast i64 %x_read" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:483]   --->   Operation 10 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_Result_40 = bitselect i1 @_ssdm_op_BitSelect.i1.i64.i32, i64 %data_V, i32 63"   --->   Operation 11 'bitselect' 'p_Result_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_38 = partselect i11 @_ssdm_op_PartSelect.i11.i64.i32.i32, i64 %data_V, i32 52, i32 62"   --->   Operation 12 'partselect' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_39 = trunc i64 %data_V"   --->   Operation 13 'trunc' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.23ns)   --->   "%icmp_ln840 = icmp_ult  i11 %tmp_38, i11 1022"   --->   Operation 14 'icmp' 'icmp_ln840' <Predicate = true> <Delay = 1.23> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %icmp_ln840, void, void %._crit_edge" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:34]   --->   Operation 15 'br' 'br_ln34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.23ns)   --->   "%icmp_ln824 = icmp_eq  i11 %tmp_38, i11 1022"   --->   Operation 16 'icmp' 'icmp_ln824' <Predicate = (!icmp_ln840)> <Delay = 1.23> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (1.73ns)   --->   "%icmp_ln824_3 = icmp_eq  i52 %tmp_39, i52 0"   --->   Operation 17 'icmp' 'icmp_ln824_3' <Predicate = (!icmp_ln840)> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.61ns)   --->   "%and_ln34 = and i1 %icmp_ln824, i1 %icmp_ln824_3" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:34]   --->   Operation 18 'and' 'and_ln34' <Predicate = (!icmp_ln840)> <Delay = 0.61> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln34 = br i1 %and_ln34, void, void %._crit_edge" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:34]   --->   Operation 19 'br' 'br_ln34' <Predicate = (!icmp_ln840)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.23ns)   --->   "%icmp_ln836 = icmp_ugt  i11 %tmp_38, i11 1074"   --->   Operation 20 'icmp' 'icmp_ln836' <Predicate = (!icmp_ln840 & !and_ln34)> <Delay = 1.23> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (1.05ns)   --->   "%br_ln37 = br i1 %icmp_ln836, void, void %._crit_edge2" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:37]   --->   Operation 21 'br' 'br_ln37' <Predicate = (!icmp_ln840 & !and_ln34)> <Delay = 1.05>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%index = partselect i6 @_ssdm_op_PartSelect.i6.i64.i32.i32, i64 %data_V, i32 52, i32 57"   --->   Operation 22 'partselect' 'index' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln488 = zext i6 %index"   --->   Operation 23 'zext' 'zext_ln488' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%mask_table_addr = getelementptr i52 %mask_table, i64 0, i64 %zext_ln488" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:46]   --->   Operation 24 'getelementptr' 'mask_table_addr' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_1 : Operation 25 [2/2] (2.66ns)   --->   "%mask = load i6 %mask_table_addr" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:73]   --->   Operation 25 'load' 'mask' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 2.66> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 52> <Depth = 64> <ROM>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%one_half_minus_one_table_addr = getelementptr i52 %one_half_minus_one_table, i64 0, i64 %zext_ln488" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:47]   --->   Operation 26 'getelementptr' 'one_half_minus_one_table_addr' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_1 : Operation 27 [2/2] (2.66ns)   --->   "%one_half = load i6 %one_half_minus_one_table_addr" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:47]   --->   Operation 27 'load' 'one_half' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 2.66> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 52> <Depth = 64> <ROM>
+
+State 2 <SV = 1> <Delay = 2.66>
+ST_2 : Operation 28 [1/2] (2.66ns)   --->   "%mask = load i6 %mask_table_addr" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:73]   --->   Operation 28 'load' 'mask' <Predicate = true> <Delay = 2.66> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 52> <Depth = 64> <ROM>
+ST_2 : Operation 29 [1/2] (2.66ns)   --->   "%one_half = load i6 %one_half_minus_one_table_addr" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:47]   --->   Operation 29 'load' 'one_half' <Predicate = true> <Delay = 2.66> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.66> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 52> <Depth = 64> <ROM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln42 = zext i52 %one_half" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:42]   --->   Operation 30 'zext' 'zext_ln42' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (1.03ns)   --->   "%br_ln50 = br void" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:50]   --->   Operation 31 'br' 'br_ln50' <Predicate = true> <Delay = 1.03>
+
+State 3 <SV = 2> <Delay = 2.81>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%i = phi i6 %add_ln50, void %.split, i6 0, void" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51]   --->   Operation 32 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.37ns)   --->   "%add_ln50 = add i6 %i, i6 1" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:50]   --->   Operation 33 'add' 'add_ln50' <Predicate = true> <Delay = 1.37> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 34 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (1.12ns)   --->   "%icmp_ln50 = icmp_eq  i6 %i, i6 62" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:50]   --->   Operation 35 'icmp' 'icmp_ln50' <Predicate = true> <Delay = 1.12> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 62, i64 62, i64 62"   --->   Operation 36 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln50 = br i1 %icmp_ln50, void %.split, void" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:50]   --->   Operation 37 'br' 'br_ln50' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln51_cast1 = zext i6 %i" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51]   --->   Operation 38 'zext' 'trunc_ln51_cast1' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i6 %i" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51]   --->   Operation 39 'zext' 'zext_ln51' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%index_table_addr_3 = getelementptr i7 %index_table, i64 0, i64 %trunc_ln51_cast1" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51]   --->   Operation 40 'getelementptr' 'index_table_addr_3' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (1.38ns)   --->   "%sub_ln51 = sub i7 51, i7 %zext_ln51" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51]   --->   Operation 41 'sub' 'sub_ln51' <Predicate = (!icmp_ln50)> <Delay = 1.38> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (1.42ns)   --->   "%store_ln51 = store i7 %sub_ln51, i6 %index_table_addr_3" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51]   --->   Operation 42 'store' 'store_ln51' <Predicate = (!icmp_ln50)> <Delay = 1.42> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 64> <RAM>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 43 'br' 'br_ln0' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.42>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%index_table_addr = getelementptr i7 %index_table, i64 0, i64 62" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:53]   --->   Operation 44 'getelementptr' 'index_table_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (1.42ns)   --->   "%store_ln53 = store i7 50, i6 %index_table_addr" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:53]   --->   Operation 45 'store' 'store_ln53' <Predicate = true> <Delay = 1.42> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 64> <RAM>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%index_table_addr_1 = getelementptr i7 %index_table, i64 0, i64 63" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:59]   --->   Operation 46 'getelementptr' 'index_table_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (1.42ns)   --->   "%store_ln59 = store i7 52, i6 %index_table_addr_1" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:59]   --->   Operation 47 'store' 'store_ln59' <Predicate = true> <Delay = 1.42> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 64> <RAM>
+
+State 5 <SV = 4> <Delay = 1.42>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%index_table_addr_2 = getelementptr i7 %index_table, i64 0, i64 %zext_ln488" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61]   --->   Operation 48 'getelementptr' 'index_table_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [2/2] (1.42ns)   --->   "%index_table_load = load i6 %index_table_addr_2" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61]   --->   Operation 49 'load' 'index_table_load' <Predicate = true> <Delay = 1.42> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 64> <RAM>
+
+State 6 <SV = 5> <Delay = 5.55>
+ST_6 : Operation 50 [1/2] (1.42ns)   --->   "%index_table_load = load i6 %index_table_addr_2" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61]   --->   Operation 50 'load' 'index_table_load' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 1.42> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 7> <Depth = 64> <RAM>
+ST_6 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node data_V_3)   --->   "%sext_ln773 = sext i7 %index_table_load"   --->   Operation 51 'sext' 'sext_ln773' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node data_V_3)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i64.i32, i64 %data_V, i32 %sext_ln773"   --->   Operation 52 'bitselect' 'p_Result_s' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (1.83ns)   --->   "%add_ln61 = add i53 %zext_ln42, i53 1" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61]   --->   Operation 53 'add' 'add_ln61' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 1.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node data_V_3)   --->   "%one_half_1 = select i1 %p_Result_s, i53 %add_ln61, i53 %zext_ln42" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61]   --->   Operation 54 'select' 'one_half_1' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node data_V_3)   --->   "%zext_ln42_1 = zext i53 %one_half_1" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:42]   --->   Operation 55 'zext' 'zext_ln42_1' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 56 [1/1] (1.99ns) (out node of the LUT)   --->   "%data_V_3 = add i64 %zext_ln42_1, i64 %data_V"   --->   Operation 56 'add' 'data_V_3' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 1.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node xs_sig_V)   --->   "%tmp_40 = trunc i64 %data_V_3"   --->   Operation 57 'trunc' 'tmp_40' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node xs_sig_V)   --->   "%xor_ln1302 = xor i52 %mask, i52 4503599627370495"   --->   Operation 58 'xor' 'xor_ln1302' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 59 [1/1] (0.67ns) (out node of the LUT)   --->   "%xs_sig_V = and i52 %tmp_40, i52 %xor_ln1302"   --->   Operation 59 'and' 'xs_sig_V' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.67> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%tmp = partselect i12 @_ssdm_op_PartSelect.i12.i64.i32.i32, i64 %data_V_3, i32 52, i32 63"   --->   Operation 60 'partselect' 'tmp' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%p_Result_42 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i12.i52, i12 %tmp, i52 %xs_sig_V"   --->   Operation 61 'bitconcatenate' 'p_Result_42' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%bitcast_ln521_1 = bitcast i64 %p_Result_42" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521]   --->   Operation 62 'bitcast' 'bitcast_ln521_1' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (1.05ns)   --->   "%br_ln74 = br void %._crit_edge2" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:74]   --->   Operation 63 'br' 'br_ln74' <Predicate = (!icmp_ln840 & !and_ln34 & !icmp_ln836)> <Delay = 1.05>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%retval_0 = phi i64 %bitcast_ln521, void %._crit_edge, i64 %bitcast_ln521_1, void, i64 %x_read, void" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521]   --->   Operation 64 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln76 = ret i64 %retval_0" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:76]   --->   Operation 65 'ret' 'ret_ln76' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 4> <Delay = 1.05>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%p_Result_41 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i1.i63, i1 %p_Result_40, i63 0"   --->   Operation 66 'bitconcatenate' 'p_Result_41' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%bitcast_ln521 = bitcast i64 %p_Result_41" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521]   --->   Operation 67 'bitcast' 'bitcast_ln521' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (1.05ns)   --->   "%br_ln36 = br void %._crit_edge2" [r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:36]   --->   Operation 68 'br' 'br_ln36' <Predicate = true> <Delay = 1.05>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.2ns.
+
+ <State 1>: 3.03ns
+The critical path consists of the following:
+	wire read on port 'x' [6]  (0 ns)
+	'getelementptr' operation ('mask_table_addr', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:46) [25]  (0 ns)
+	'load' operation ('mask', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:73) on array 'mask_table' [26]  (2.66 ns)
+	blocking operation 0.363 ns on control path)
+
+ <State 2>: 2.66ns
+The critical path consists of the following:
+	'load' operation ('mask', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:73) on array 'mask_table' [26]  (2.66 ns)
+
+ <State 3>: 2.81ns
+The critical path consists of the following:
+	'phi' operation ('i', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51) with incoming values : ('add_ln50', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:50) [32]  (0 ns)
+	'sub' operation ('sub_ln51', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51) [42]  (1.39 ns)
+	'store' operation ('store_ln51', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51) of variable 'sub_ln51', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:51 on array 'index_table', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:49 [43]  (1.43 ns)
+
+ <State 4>: 1.43ns
+The critical path consists of the following:
+	'getelementptr' operation ('index_table_addr', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:53) [46]  (0 ns)
+	'store' operation ('store_ln53', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:53) of constant 50 on array 'index_table', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:49 [47]  (1.43 ns)
+
+ <State 5>: 1.43ns
+The critical path consists of the following:
+	'getelementptr' operation ('index_table_addr_2', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61) [50]  (0 ns)
+	'load' operation ('index_table_load', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61) on array 'index_table', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:49 [51]  (1.43 ns)
+
+ <State 6>: 5.56ns
+The critical path consists of the following:
+	'add' operation ('add_ln61', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61) [54]  (1.84 ns)
+	'select' operation ('one_half', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint\hls_rint.h:61) [55]  (0 ns)
+	'add' operation ('data.V') [57]  (1.99 ns)
+	'and' operation ('xs.sig.V') [60]  (0.674 ns)
+	multiplexor before 'phi' operation ('retval_0', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) with incoming values : ('x') ('bitcast_ln521_1', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) ('bitcast_ln521', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) [70]  (1.06 ns)
+	'phi' operation ('retval_0', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) with incoming values : ('x') ('bitcast_ln521_1', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) ('bitcast_ln521', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) [70]  (0 ns)
+
+ <State 7>: 1.06ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('retval_0', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) with incoming values : ('x') ('bitcast_ln521_1', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) ('bitcast_ln521', r:/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/src/hls\utils/x_hls_utils.h:521) [70]  (1.06 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

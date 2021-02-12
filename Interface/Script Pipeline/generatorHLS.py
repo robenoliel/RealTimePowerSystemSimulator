@@ -33,9 +33,8 @@ print('h:',h)
 
 if HLSworkspace == '':
     HLSworkspace = path
-
 try:
-    os.mkdir(HLSworkspace + "HLSfiles")
+    os.mkdir(HLSworkspace + "\\HLSfiles")
     print('HLS files directory created successfully.')
 except FileExistsError:
     print('HLS directory ready.')
@@ -45,7 +44,7 @@ except FileExistsError:
 file_code = File_main_core_h(netList, precision = precision)
 
 try:
-    file = open(path + "HLSfiles\\main_core.h",'w')
+    file = open(HLSworkspace + "\\HLSfiles\\main_core.h",'w')
     file.write(file_code.get_main_string())
     file.close()
     print('The file main_core.h was generated successfully.')
@@ -57,7 +56,8 @@ except:
 file_code = File_main_core_cpp(netList, np.linalg.inv(Am), h, precision = precision)
 
 try:
-    file = open(path + "HLSfiles\\main_core.cpp",'w')
+    file = open(HLSworkspace + "\\HLSfiles\\main_core.cpp",'w')
+    print(file_code.get_main_string()[0:10])
     file.write(file_code.get_main_string())
     file.close()
     print('The file main_core.cpp was generated successfully.')
@@ -70,7 +70,7 @@ except:
 file_code = File_main_core_tb_cpp(np.linalg.inv(Am), h, time, name)
 
 try:
-    file = open(path + "HLSfiles\\main_core_tb.cpp",'w')
+    file = open(HLSworkspace + "\\HLSfiles\\main_core_tb.cpp",'w')
     file.write(file_code.get_main_string())
     file.close()
     print('The file main_core_tb.cpp was generated successfully.')

@@ -1,0 +1,173 @@
+
+
+================================================================
+== Vitis HLS Report for 'histvect'
+================================================================
+* Date:           Sat Feb  6 16:57:24 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        RLCADCungrounded_Vitis
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.874 ns|     0.20 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       14|       14|  0.140 us|  0.140 us|    7|    7|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      35|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     190|    -|
+|Register         |        -|     -|     234|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     234|     225|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     2060|  2800|  607200|  303600|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------+----------+----+---+----+------------+------------+
+    |   Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------+----------+----+---+----+------------+------------+
+    |ap_enable_pp0      |       xor|   0|  0|   2|           1|           2|
+    |xor_ln91_fu_85_p2  |       xor|   0|  0|  33|          32|          33|
+    +-------------------+----------+----+---+----+------------+------------+
+    |Total              |          |   0|  0|  35|          33|          35|
+    +-------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |G_vec_I_1_o                      |   9|          2|   32|         64|
+    |G_vec_I_2_o                      |   9|          2|   32|         64|
+    |ap_NS_fsm                        |  33|          8|    1|          8|
+    |ap_enable_reg_pp0_iter0          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2          |   9|          2|    1|          2|
+    |ap_sig_allocacmp_G_vec_I_1_load  |   9|          2|   32|         64|
+    |grp_fu_26_opcode                 |  13|          3|    2|          6|
+    |grp_fu_26_p0                     |  17|          4|   32|        128|
+    |grp_fu_26_p1                     |  17|          4|   32|        128|
+    |grp_fu_30_opcode                 |  13|          3|    2|          6|
+    |grp_fu_30_p0                     |  13|          3|   32|         96|
+    |grp_fu_30_p1                     |  13|          3|   32|         96|
+    |grp_fu_38_p0                     |  13|          3|   32|         96|
+    |grp_fu_38_p1                     |  13|          3|   32|         96|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            | 190|         44|  295|        856|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   7|   0|    7|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2      |   1|   0|    1|          0|
+    |elements_Ih_0                |  32|   0|   32|          0|
+    |elements_Ih_1                |  32|   0|   32|          0|
+    |mul_1_reg_140                |  32|   0|   32|          0|
+    |mul_reg_130                  |  32|   0|   32|          0|
+    |reg_44                       |  32|   0|   32|          0|
+    |sub3_1_reg_160               |  32|   0|   32|          0|
+    |sub4_reg_155                 |  32|   0|   32|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 234|   0|  234|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|      histvect|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|      histvect|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|      histvect|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_726_p_din0    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_726_p_din1    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_726_p_opcode  |  out|    2|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_726_p_dout0   |   in|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_726_p_ce      |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_730_p_din0    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_730_p_din1    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_730_p_opcode  |  out|    2|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_730_p_dout0   |   in|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_730_p_ce      |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_734_p_din0    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_734_p_din1    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_734_p_opcode  |  out|    2|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_734_p_dout0   |   in|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_734_p_ce      |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_742_p_din0    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_742_p_din1    |  out|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_742_p_dout0   |   in|   32|  ap_ctrl_hs|      histvect|  return value|
+|grp_fu_742_p_ce      |  out|    1|  ap_ctrl_hs|      histvect|  return value|
+|G_vec_V_1            |   in|   32|     ap_none|     G_vec_V_1|       pointer|
+|G_vec_I_1_i          |   in|   32|     ap_ovld|     G_vec_I_1|       pointer|
+|G_vec_I_1_o          |  out|   32|     ap_ovld|     G_vec_I_1|       pointer|
+|G_vec_I_1_o_ap_vld   |  out|    1|     ap_ovld|     G_vec_I_1|       pointer|
+|G_vec_V_2            |   in|   32|     ap_none|     G_vec_V_2|       pointer|
+|G_vec_I_2_i          |   in|   32|     ap_ovld|     G_vec_I_2|       pointer|
+|G_vec_I_2_o          |  out|   32|     ap_ovld|     G_vec_I_2|       pointer|
+|G_vec_I_2_o_ap_vld   |  out|    1|     ap_ovld|     G_vec_I_2|       pointer|
++---------------------+-----+-----+------------+--------------+--------------+
+

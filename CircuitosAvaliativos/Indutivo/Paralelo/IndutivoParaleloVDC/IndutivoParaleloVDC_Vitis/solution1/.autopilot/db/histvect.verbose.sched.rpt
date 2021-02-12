@@ -1,0 +1,252 @@
+
+
+================================================================
+== Vitis HLS Report for 'histvect'
+================================================================
+* Date:           Mon Feb  1 13:23:03 2021
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        IndutivoParaleloVDC_Vitis
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.440 ns|     0.20 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       14|       14|  0.140 us|  0.140 us|    3|    3|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 15
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 15, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.21>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%G_vec_V_2_load = load i32 %G_vec_V_2" [HLSfiles/main_core.cpp:85]   --->   Operation 16 'load' 'G_vec_V_2_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%G_vec_V_1_load = load i32 %G_vec_V_1" [HLSfiles/main_core.cpp:88]   --->   Operation 17 'load' 'G_vec_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [4/4] (8.21ns)   --->   "%sub = fsub i32 %G_vec_V_2_load, i32 %G_vec_V_1_load" [HLSfiles/main_core.cpp:91]   --->   Operation 18 'fsub' 'sub' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 8.21>
+ST_2 : Operation 19 [3/4] (8.21ns)   --->   "%sub = fsub i32 %G_vec_V_2_load, i32 %G_vec_V_1_load" [HLSfiles/main_core.cpp:91]   --->   Operation 19 'fsub' 'sub' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 8.21>
+ST_3 : Operation 20 [2/4] (8.21ns)   --->   "%sub = fsub i32 %G_vec_V_2_load, i32 %G_vec_V_1_load" [HLSfiles/main_core.cpp:91]   --->   Operation 20 'fsub' 'sub' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 8.21>
+ST_4 : Operation 21 [1/4] (8.21ns)   --->   "%sub = fsub i32 %G_vec_V_2_load, i32 %G_vec_V_1_load" [HLSfiles/main_core.cpp:91]   --->   Operation 21 'fsub' 'sub' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 8.44>
+ST_5 : Operation 22 [3/3] (8.44ns)   --->   "%mul = fmul i32 %sub, i32 0.01" [HLSfiles/main_core.cpp:91]   --->   Operation 22 'fmul' 'mul' <Predicate = true> <Delay = 8.44> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 8.44> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 8.44>
+ST_6 : Operation 23 [2/3] (8.44ns)   --->   "%mul = fmul i32 %sub, i32 0.01" [HLSfiles/main_core.cpp:91]   --->   Operation 23 'fmul' 'mul' <Predicate = true> <Delay = 8.44> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 8.44> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 8.44>
+ST_7 : Operation 24 [1/3] (8.44ns)   --->   "%mul = fmul i32 %sub, i32 0.01" [HLSfiles/main_core.cpp:91]   --->   Operation 24 'fmul' 'mul' <Predicate = true> <Delay = 8.44> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 8.44> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 8.21>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%elements_Ih_0_load = load i32 %elements_Ih_0"   --->   Operation 25 'load' 'elements_Ih_0_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 26 [4/4] (8.21ns)   --->   "%add = fadd i32 %elements_Ih_0_load, i32 %mul" [HLSfiles/main_core.cpp:94]   --->   Operation 26 'fadd' 'add' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 8.21>
+ST_9 : Operation 27 [3/4] (8.21ns)   --->   "%add = fadd i32 %elements_Ih_0_load, i32 %mul" [HLSfiles/main_core.cpp:94]   --->   Operation 27 'fadd' 'add' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 8.21>
+ST_10 : Operation 28 [2/4] (8.21ns)   --->   "%add = fadd i32 %elements_Ih_0_load, i32 %mul" [HLSfiles/main_core.cpp:94]   --->   Operation 28 'fadd' 'add' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 8.21>
+ST_11 : Operation 29 [1/4] (8.21ns)   --->   "%add = fadd i32 %elements_Ih_0_load, i32 %mul" [HLSfiles/main_core.cpp:94]   --->   Operation 29 'fadd' 'add' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 30 [1/1] (0.00ns)   --->   "%store_ln91 = store i32 %add, i32 %elements_Ih_0" [HLSfiles/main_core.cpp:91]   --->   Operation 30 'store' 'store_ln91' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 8.21>
+ST_12 : Operation 31 [1/1] (0.00ns)   --->   "%G_vec_I_2_load = load i32 %G_vec_I_2" [HLSfiles/main_core.cpp:97]   --->   Operation 31 'load' 'G_vec_I_2_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 32 [4/4] (8.21ns)   --->   "%sub1 = fsub i32 %G_vec_I_2_load, i32 %add" [HLSfiles/main_core.cpp:97]   --->   Operation 32 'fsub' 'sub1' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 33 [1/1] (0.00ns)   --->   "%G_vec_I_1_load = load i32 %G_vec_I_1" [HLSfiles/main_core.cpp:98]   --->   Operation 33 'load' 'G_vec_I_1_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 34 [4/4] (8.21ns)   --->   "%add3 = fadd i32 %G_vec_I_1_load, i32 %add" [HLSfiles/main_core.cpp:98]   --->   Operation 34 'fadd' 'add3' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 8.21>
+ST_13 : Operation 35 [3/4] (8.21ns)   --->   "%sub1 = fsub i32 %G_vec_I_2_load, i32 %add" [HLSfiles/main_core.cpp:97]   --->   Operation 35 'fsub' 'sub1' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 36 [3/4] (8.21ns)   --->   "%add3 = fadd i32 %G_vec_I_1_load, i32 %add" [HLSfiles/main_core.cpp:98]   --->   Operation 36 'fadd' 'add3' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 8.21>
+ST_14 : Operation 37 [2/4] (8.21ns)   --->   "%sub1 = fsub i32 %G_vec_I_2_load, i32 %add" [HLSfiles/main_core.cpp:97]   --->   Operation 37 'fsub' 'sub1' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 38 [2/4] (8.21ns)   --->   "%add3 = fadd i32 %G_vec_I_1_load, i32 %add" [HLSfiles/main_core.cpp:98]   --->   Operation 38 'fadd' 'add3' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 8.21>
+ST_15 : Operation 39 [1/1] (0.00ns)   --->   "%specpipeline_ln80 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [HLSfiles/main_core.cpp:80]   --->   Operation 39 'specpipeline' 'specpipeline_ln80' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 40 [1/4] (8.21ns)   --->   "%sub1 = fsub i32 %G_vec_I_2_load, i32 %add" [HLSfiles/main_core.cpp:97]   --->   Operation 40 'fsub' 'sub1' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 41 [1/1] (0.00ns)   --->   "%store_ln97 = store i32 %sub1, i32 %G_vec_I_2" [HLSfiles/main_core.cpp:97]   --->   Operation 41 'store' 'store_ln97' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 42 [1/4] (8.21ns)   --->   "%add3 = fadd i32 %G_vec_I_1_load, i32 %add" [HLSfiles/main_core.cpp:98]   --->   Operation 42 'fadd' 'add3' <Predicate = true> <Delay = 8.21> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 8.21> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 43 [1/1] (0.00ns)   --->   "%store_ln98 = store i32 %add3, i32 %G_vec_I_1" [HLSfiles/main_core.cpp:98]   --->   Operation 43 'store' 'store_ln98' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln100 = ret" [HLSfiles/main_core.cpp:100]   --->   Operation 44 'ret' 'ret_ln100' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 0.2ns.
+
+ <State 1>: 8.22ns
+The critical path consists of the following:
+	'load' operation ('G_vec_V_2_load', HLSfiles/main_core.cpp:85) on static variable 'G_vec_V_2' [8]  (0 ns)
+	'fsub' operation ('sub', HLSfiles/main_core.cpp:91) [11]  (8.22 ns)
+
+ <State 2>: 8.22ns
+The critical path consists of the following:
+	'fsub' operation ('sub', HLSfiles/main_core.cpp:91) [11]  (8.22 ns)
+
+ <State 3>: 8.22ns
+The critical path consists of the following:
+	'fsub' operation ('sub', HLSfiles/main_core.cpp:91) [11]  (8.22 ns)
+
+ <State 4>: 8.22ns
+The critical path consists of the following:
+	'fsub' operation ('sub', HLSfiles/main_core.cpp:91) [11]  (8.22 ns)
+
+ <State 5>: 8.44ns
+The critical path consists of the following:
+	'fmul' operation ('mul', HLSfiles/main_core.cpp:91) [12]  (8.44 ns)
+
+ <State 6>: 8.44ns
+The critical path consists of the following:
+	'fmul' operation ('mul', HLSfiles/main_core.cpp:91) [12]  (8.44 ns)
+
+ <State 7>: 8.44ns
+The critical path consists of the following:
+	'fmul' operation ('mul', HLSfiles/main_core.cpp:91) [12]  (8.44 ns)
+
+ <State 8>: 8.22ns
+The critical path consists of the following:
+	'load' operation ('elements_Ih_0_load') on static variable 'elements_Ih_0' [10]  (0 ns)
+	'fadd' operation ('add', HLSfiles/main_core.cpp:94) [13]  (8.22 ns)
+
+ <State 9>: 8.22ns
+The critical path consists of the following:
+	'fadd' operation ('add', HLSfiles/main_core.cpp:94) [13]  (8.22 ns)
+
+ <State 10>: 8.22ns
+The critical path consists of the following:
+	'fadd' operation ('add', HLSfiles/main_core.cpp:94) [13]  (8.22 ns)
+
+ <State 11>: 8.22ns
+The critical path consists of the following:
+	'fadd' operation ('add', HLSfiles/main_core.cpp:94) [13]  (8.22 ns)
+
+ <State 12>: 8.22ns
+The critical path consists of the following:
+	'load' operation ('G_vec_I_2_load', HLSfiles/main_core.cpp:97) on static variable 'G_vec_I_2' [15]  (0 ns)
+	'fsub' operation ('sub1', HLSfiles/main_core.cpp:97) [16]  (8.22 ns)
+
+ <State 13>: 8.22ns
+The critical path consists of the following:
+	'fsub' operation ('sub1', HLSfiles/main_core.cpp:97) [16]  (8.22 ns)
+
+ <State 14>: 8.22ns
+The critical path consists of the following:
+	'fsub' operation ('sub1', HLSfiles/main_core.cpp:97) [16]  (8.22 ns)
+
+ <State 15>: 8.22ns
+The critical path consists of the following:
+	'fsub' operation ('sub1', HLSfiles/main_core.cpp:97) [16]  (8.22 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

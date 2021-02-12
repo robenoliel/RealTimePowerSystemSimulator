@@ -1,0 +1,73 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'rodrigobagdadi' on host 'w16pscadsuper' (Windows NT_amd64 version 6.2) on Tue Feb 09 16:47:56 -0300 2021
+INFO: [HLS 200-10] In directory 'C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/RLC/RLCAAC'
+Sourcing Tcl script 'C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/RLC/RLCAAC/RLCAAC_Vitis/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: open_project RLCAAC_Vitis 
+INFO: [HLS 200-10] Opening project 'C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/RLC/RLCAAC/RLCAAC_Vitis'.
+INFO: [HLS 200-1510] Running: set_top nodalSolver 
+INFO: [HLS 200-1510] Running: add_files HLSfiles/main_core.cpp 
+INFO: [HLS 200-10] Adding design file 'HLSfiles/main_core.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files HLSfiles/main_core.h 
+INFO: [HLS 200-10] Adding design file 'HLSfiles/main_core.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb HLSfiles/main_core_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'HLSfiles/main_core_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/rodrigobagdadi/Desktop/RealTime/ProjetoPipelineHLS/CircuitosAvaliativos/RLC/RLCAAC/RLCAAC_Vitis/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.2ns.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7vx485tffg1157-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 2% 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../HLSfiles/main_core_tb.cpp in debug mode
+   Compiling ../../../../HLSfiles/main_core.cpp in debug mode
+   Generating csim.exe
+../../../../HLSfiles/main_core_tb.cpp: In function 'int main()':
+../../../../HLSfiles/main_core_tb.cpp:10:13: warning: unknown escape sequence: '\C'
+  fp = fopen("C:\\Users\\rodrigobagdadi\\Desktop\\RealTime\\ProjetoPipelineHLS\\\CircuitosAvaliativos\\RLC\\RLCAAC\\results_RLCAAC.txt", "w");
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Xilinx/Vitis_HLS/2020.2/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_math.h:41,
+                 from ../../../../HLSfiles/main_core.cpp:1:
+C:/Xilinx/Vitis_HLS/2020.2/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2020.2/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_math.h:41,
+                 from ../../../../HLSfiles/main_core.cpp:1:
+C:/Xilinx/Vitis_HLS/2020.2/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2020.2/include/hls_hotbm_apfixed.h:45:0,
+                 from C:/Xilinx/Vitis_HLS/2020.2/include/hls_math.h:1065,
+                 from ../../../../HLSfiles/main_core.cpp:1:
+C:/Xilinx/Vitis_HLS/2020.2/include/utils/x_hls_utils.h:243:40: warning: 'hls_preserve' attribute directive ignored [-Wattributes]
+ __attribute__((hls_preserve)) T reg(T d)
+                                        ^
+../../../../HLSfiles/main_core.cpp: In function 'OUTPUT nodalSolver()':
+../../../../HLSfiles/main_core.cpp:115:25: warning: narrowing conversion of 'std::nearbyint(((G_vec_V[1] * (VECTOR_V)256) + (VECTOR_V)32768))' from 'float' to 'int' inside { } [-Wnarrowing]
+  OUTPUT out = {nearbyint(G_vec_V[A]*256 + 32768),
+                ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../../../../HLSfiles/main_core.cpp:116:16: warning: narrowing conversion of 'std::nearbyint(((G_vec_V[1] * (VECTOR_V)256) + (VECTOR_V)32768))' from 'float' to 'int' inside { } [-Wnarrowing]
+       nearbyint(G_vec_V[B]*256 + 32768),
+       ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../../../../HLSfiles/main_core.cpp:117:16: warning: narrowing conversion of 'std::nearbyint(((G_vec_V[2] * (VECTOR_V)256) + (VECTOR_V)32768))' from 'float' to 'int' inside { } [-Wnarrowing]
+       nearbyint(G_vec_V[C]*256 + 32768),
+       ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+../../../../HLSfiles/main_core.cpp:118:16: warning: narrowing conversion of 'std::nearbyint(((G_vec_V[0] * (VECTOR_V)256) + (VECTOR_V)32768))' from 'float' to 'int' inside { } [-Wnarrowing]
+       nearbyint(G_vec_V[D]*256 + 32768)};
+       ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.564 seconds; current allocated memory: 84.427 MB.

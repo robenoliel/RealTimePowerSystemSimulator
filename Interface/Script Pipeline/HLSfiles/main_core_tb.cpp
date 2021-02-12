@@ -7,10 +7,10 @@ int main(){
 	OUTPUT outprint;
 
 	FILE *fp;
-	fp = fopen("C:\\Users\\rodrigobagdadi\\Desktop\\RealTime\\ProjetoPipelineHLS\\Resultados\\sotero\\results_sotero.txt", "w");
+	fp = fopen("C:\\Users\\rodrigobagdadi\\Desktop\\RealTime\\ProjetoPipelineHLS\\Resultados\\a\\results_a.txt", "w");
 	std::string perm;
 
-	for(int i = 0; i < 1000; i++){
+	for(int i = 0; i < 9; i++){
 		outprint = nodalSolver();
 
 		perm.append(std::to_string(outprint.a));

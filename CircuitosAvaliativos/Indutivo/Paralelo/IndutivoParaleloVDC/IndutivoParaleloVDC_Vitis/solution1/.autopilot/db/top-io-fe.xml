@@ -1,0 +1,9 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="nodalSolver" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+    </args>
+    <return src_type="OUTPUT" src_bitwidth="128" offset="0x0">
+      <hw hw_usage="data" hw_interface="Register" hw_name="return" hw_bitwidth="128"/>
+    </return>
+  </kernel>
+</root>

@@ -2025,6 +2025,71 @@ def registrar_nos(event):   #Missing the part where we check if the circuit is o
     hist.close()
     vetv.close()
 
+##########################################################################################
+    #SOLUCAO#
+    ##########################################################################################
+    dV={}
+    for n in range(0,m+1): #From V0 to Vn
+        dV['V{}'.format(n)]=[]
+        
+    iteracoes=int(round(time/h))
+    
+    timeList=[] #Time array
+    for i in range(iteracoes):
+        timeList.append(i*h)
+    print(timeList)
+    Ainv = np.linalg.inv(A) #Creates the Inverse of A matrix
+    
+    for timeunit in timeList: # starting resolution loop !!!
+        x = np.dot(Ainv,Z) #Multiplies the known matrices
+        
+        for key in dV:
+            if key !='V0':
+                dV[key].append(x[int(key[1])-1][0]) 
+            else: 
+                dV[key].append(0)
+                
+    #   print('Z: ', Z)
+        for n in positionC: #For every Capacitor line in the A matrix, the code looks for the   
+            line=A[n-1][:n-2]  #positive and negative node and get their Voltage in the X matrix
+    #        print(line)
+            nNode=0
+            pNode=0
+            
+            for i in range(1,len(line)+1) :
+                if line[i-1]<0:
+                    nNode=i
+                if line[i-1]>0:
+                    pNode=i
+            if pNode!=0:
+                Vk=x[pNode-1][0]
+                fator=A[n-1][pNode-1] # c/h
+            else:
+                Vk=0
+                fator=-A[n-1][nNode-1] # c/h
+            if nNode!=0:
+                Vm=x[nNode-1][0]
+            else:
+                Vm=0
+                
+    #        print('c/h: ',fator,'V1: ', V1,'V2: ',V2)
+            Z[n-1][0]=fator*(Vk-Vm)
+        for n in positionL: #For every Capacitor line in the A matrix, the code looks for the   
+            line=A[n-1][:]  #positive and negative node and get their Voltage in the X matrix
+            
+            iL=x[n-1][0]
+            fator=A[n-1][n-1] # -l/h
+            Z[n-1][0]=fator*iL 
+            
+        for n in positionA:
+            fator=n[1]*math.sin(n[2]*2*math.pi*timeunit + n[3])
+            Z[n[0]-1][0]=fator
+    
+   
+    for n in dV:
+        print(n,':',dV[n])
+        
+    wires=wires_origin[:]
 
 #                 class      icon   name   position of button     text and unit
 def create_button(class_name, img,name, textunit , unit):
