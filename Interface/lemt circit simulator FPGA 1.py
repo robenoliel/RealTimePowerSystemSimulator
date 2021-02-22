@@ -669,6 +669,12 @@ class electricComponent():
         canvas.delete(self.text)
         elements.remove(self)
 
+class Voltmeter(electricComponent):
+    def __init__(self,Value=None,x=100,y=100,orientacao=270,unit=None):
+        electricComponent.__init__(self,Value,'Voltmeter','Voltmeter','VM',30,x,y,orientacao,unit)
+        if self.end != self.start:
+            self.end = self.start
+
 class electricComponentAC(electricComponent):
     def __init__(self,value,file,name,letter,size,x=100,y=100,orientacao=0,unit=None,freq=0,freq_unit='Hz',phase=0,phase_unit='degr',offset=0,offset_unit=None):
         electricComponent.__init__(self,value,file,name,letter,50,x,y,orientacao,unit)
@@ -2089,6 +2095,23 @@ def registrar_nos(event):   #Missing the part where we check if the circuit is o
     for n in dV:
         print(n,':',dV[n])
         
+    for voltmeter_name in simulationnodes:
+        win=Tk()
+        win.geometry('600x530+300+50') 
+        win.title('LEMT CIRCUIT SIMULATOR')
+        figure=Figure(figsize=(9,7),dpi=70)
+        figure.suptitle('Voltage x Time in {}'.format(voltmeter_name))
+        a=figure.add_subplot(111)
+        a.plot(timeList,dV[str( simulationnodes[voltmeter_name] )])
+        a.grid()
+        print('oi')
+        canvasplot=FigureCanvasTkAgg(figure,master=win)
+        canvasplot.get_tk_widget().pack(fill=BOTH)
+        canvasplot.draw()
+        toolbar = NavigationToolbar2Tk(canvasplot,win)
+        toolbar.update()
+        canvasplot._tkcanvas.pack()
+        
     wires=wires_origin[:]
 
 #                 class      icon   name   position of button     text and unit
@@ -2151,8 +2174,6 @@ def create_button_novalues(class_name, icon):
     button=Button(frameLeft, image=icon, compound = 'top', width=50)
     button.bind('<ButtonPress-1>',create_instance)
     button.pack(side=TOP, padx=5,pady=5)
-
-
 
 
 def create_ACsource(event):
