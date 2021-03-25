@@ -12,7 +12,7 @@ void sinGen(void){
 	static I_SOURCE i_sources[I_SOURCES] = 
 {};
 	static V_SOURCE sources[V_SOURCES] = 
-{{0.0000000e+00, 0.0000000e+00, 0.0000000e+00, 1.0000000e+00}};
+{{3.7699112e+00, 1.0000000e+00, 5.2359878e-01, 1.0000000e+00}};
 
 	loop_1:for(unsigned char i = 0; i < V_SOURCES; i++){
 		G_vec_I[i + NODES] = sources[i].DClevel + sources[i].amplitude*sin(sources[i].phase);
@@ -53,8 +53,8 @@ void vetmat(void){
 	/*const MATRIX_G Gi [N][N] =  ;*/
 	//#pragma HLS array_reshape variable=Gi complete dim=0
 	const MATRIX_G Gi[N][N] = 
-{{0.0000000e+00, 1.0000000e+00},
-{1.0000000e+00, -1.0000000e+00}};
+{{0.0000000e+00, -1.0000000e+00},
+{-1.0000000e+00, -1.0000000e+00}};
 	float acc;
 	loop_1:for(unsigned char i = 0; i<N; i++){
 		acc = 0;

@@ -6,3 +6,4 @@ memory_initialization_vector =
 ; w.t (32b) + current phase (32b) + amplitude (32b) + DC offSet(32b)
 ; "w" is the angular frequency and "t" is the integration pass 
 
+00111001110001011010011011100101010000011111000000000000000000000011111110000000000000000000000000111111100000000000000000000000;
